@@ -10,7 +10,7 @@
     margin: 50px auto 0;
 }
 .gap {
-    width:100%;
+    width:90%;
     height:auto;
     display: flex;
     flex-direction: column;
@@ -179,4 +179,5 @@
     gap: 20px;
 }
 }
+
 
