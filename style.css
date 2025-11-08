@@ -23,7 +23,7 @@
     height: auto;
     text-align: center;
     color: rgb(94, 49, 9);
-    margin: 50px 0 0  0;
+    /* margin: 50px 0 0  0; */
 }
 .text {
     font-family: "Open Sans";
@@ -40,7 +40,7 @@
     border-radius: 10px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 190px 190px;
+    grid-template-rows: 200px 200px;
     gap: 40px;
     margin: 50px 0 0 0;
 }
