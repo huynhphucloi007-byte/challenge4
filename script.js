@@ -1,24 +1,40 @@
-// Lấy phần tử
-  const modal = document.getElementById("myModal");
-  const img = document.getElementById("myImg");
-  const modalImg = document.getElementById("imgFull");
-  const span = document.getElementsByClassName("close")[0];
+const modal = document.getElementById("myModal");
+const modalImg = document.getElementById("imgFull");
 
-  // Khi nhấn vào ảnh
-  img.onclick = function() {
-    modal.style.display = "block";
-    modalImg.src = this.src;
-    captionText.innerHTML = this.alt;
-  }
+const closeBtn = document.getElementsByClassName("close")[0]; 
 
-  // Khi nhấn nút X
-  span.onclick = function() {
-    modal.style.display = "none";
-  }
+const captionText = document.getElementById("caption"); 
 
-  // Khi nhấn ra ngoài ảnh
-  modal.onclick = function(e) {
-    if (e.target === modal) modal.style.display = "none";
-  }
 
+const images = document.querySelectorAll(".sum-img");
+
+
+images.forEach(img => {
+  img.addEventListener("click", () => {
+
+    modal.style.display = "block"; 
+    
+
+    modalImg.src = img.src; 
+ 
+    if (captionText) {
+        captionText.innerHTML = img.alt;
+    }
+  });
+});
+
+
+if (closeBtn) {
+    closeBtn.onclick = () => {
+        modal.style.display = "none";
+    }
+}
+
+if (modal) {
+    modal.onclick = (e) => {
+        if (e.target === modal) {
+            modal.style.display = "none";
+        }
+    }
+}
   
